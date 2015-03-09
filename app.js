@@ -7,7 +7,7 @@ var myApp = angular.module('myApp', ['App-Fac-Directive', 'App-Service', 'ngRout
 
             // route for the home page
             .when('/', {
-                templateUrl : 'pages/home.html',
+                templateUrl : 'pages/layout.html',
                 controller  : 'MainCtrl'
             })
 
@@ -24,14 +24,7 @@ var myApp = angular.module('myApp', ['App-Fac-Directive', 'App-Service', 'ngRout
             });
     });
 
-myApp.controller('MainCtrl', function($scope) {
 
-        // create a message to display in our view
-        $scope.message = 'Everyone come and see how good I look!';
-    });
-
-
-	
 
     myApp.controller('aboutController', function($scope) {
         $scope.message = 'Look! I am an about page.';

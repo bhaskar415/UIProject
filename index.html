@@ -12,9 +12,8 @@
   <!--ui-grid Import   https://github.com/angular-ui/ui-grid.info/tree/gh-pages/release -->
 	<script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
     <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css">
- 		  
-		  
-	   <!-- JavaScript placed at the end of the document so the pages load faster -->
+   
+   <!-- JavaScript placed at the end of the document so the pages load faster -->
     <!-- Optional: Include the jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
@@ -25,18 +24,17 @@
   <script src="app/infrastructure/components/table/uiTable.js"></script>	  
 		  
   <!--App Import-->
-  <script src="app_V2.js"></script>
+  <script src="app.js"></script>
+  <script src="main.js"></script>
   <script src="appFac_directive.js"></script>
   <script src="service.js"></script>  
   
  
 </head>
 
-<body ng-controller="MainCtrl">
-
-
-   <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <div id="main">
+<body ng-controller="MainCtrl">   <!-- MAIN CONTENT AND INJECTED VIEWS -->
+  
+  <div id="main">
 		<!-- angular templating -->
         <!-- this is where content will be injected -->
         <div ng-view></div>       
