@@ -18,26 +18,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	  
-		  
-  <!--Infrastructure Import-->
+		
+
+
+		
+  <!--Infrastructure Imports-->
   <script src="app/infrastructure/service/http-curd-service.js"></script>
   <script src="app/infrastructure/components/table/uiTable.js"></script>	  
-		  
+ 
+  <!--layout Imports-->
+  <script src="app/layout/directives/leftPanelDirective.js"></script>	  
+	 
+	
   <!--App Import-->
-  <script src="app.js"></script>
+  <script src="app/app.js"></script>
   <script src="appFac_directive.js"></script>
   <script src="service.js"></script>  
   
  
 </head>
 
-<body ng-controller="MainCtrl">   <!-- MAIN CONTENT AND INJECTED VIEWS -->
+<body ng-controller="layoutCtrl">  
   
   <div id="main">
 		<!-- angular templating -->
         <!-- this is where content will be injected -->
-        <div ng-view></div>       
-    </div>
+		<div ng-include="template.layout"></div>
+   </div>
  
   
 </body>
