@@ -1,12 +1,33 @@
-var leftPanel = angular.module('layout-left-panel', []);
+var myApp = angular.module('UIPanel-Directive', []);
 
-leftPanel.directive('leftPanel', function(){  
+myApp.controller("UIPanelController",
+			function($scope ) {
+    
+	}
+);
+
+myApp.directive('uiPanel', function(){  
+var htmlTemplate="";
+htmlTemplate += "<div class=\"panel panel-primary\">";
+htmlTemplate += "  <div class=\"panel-heading\">";
+htmlTemplate += " 	<h3 class=\"panel-title\">{{title}}<\/h3> <br><br>";
+htmlTemplate += "  <\/div>";
+htmlTemplate += "  <div class=\"panel-body\">";
+htmlTemplate += "	  ";
+htmlTemplate += "       <ng-transclude><\/ng-transclude>";
+htmlTemplate += "	   ";
+htmlTemplate += " <\/div>";
+htmlTemplate += "<\/div>  ";
   return {
-    restrict: 'EA', 
-	scope: { url: '@', // if it is a object substitution
-			columns: '=',
+    restrict: 'EA',
+	transclude: true,	
+	scope: { title: '@' // if it is a object substitution
 			 },	 
-	 controller:"",		
-     templateUrl: 'app/layout/html/components/leftPanel.html'
+	 controller:"UIPanelController",		
+     template: htmlTemplate   
   };
-});
+});	
+
+	
+	
+
