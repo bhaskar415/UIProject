@@ -1,6 +1,17 @@
 var myApp = angular.module('Forms-Directive', ['Forms-Controller']);
 
 myApp.directive('userForms', function(){  
+  return {
+    restrict: 'EA', 
+	scope: { url: '@', // if it is a object substitution
+			columns: '=',
+			 },	 
+	 controller:"FormsController",		
+     templateUrl: 'UserFormsView.html'
+  };
+});
+
+myApp.directive('userFormsNotUsed', function(){  
 var htmlTemplate = "<div>"+
 						"<button ng-click='getAllUserFroms()' class='btn btn-info btn-xs'><span class='glyphicon glyphicon-play'></span>All Forms</button>"+
 							"<button type='button' class='btn btn-success btn-xs' ng-click='addFormShowView()'><span class='glyphicon glyphicon-plus'></span>Form</button><br><br>"+
@@ -22,6 +33,6 @@ var htmlTemplate = "<div>"+
 			columns: '=',
 			 },	 
 	 controller:"FormsController",		
-     template: htmlTemplate   //'<div>ksfdklfjsdklfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjlk</div>'
+     template: htmlTemplate   
   };
 });
