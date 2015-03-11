@@ -1,7 +1,6 @@
-<html>
+<html ng-app="myApp">
 <head>
   <title>Dyno Forms</title>
-  
     <!--Styling and theme Imports-->
 	<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,34 +22,31 @@
 
 		
   <!--Infrastructure Imports-->
-  <script src="infrastructure/service/http-curd-service.js"></script>
-  <script src="infrastructure/components/table/uiTable.js"></script>	  
+  <script src="https://rawgit.com/bhaskar415/UIProject/master/main/app/infrastructure/service/http-curd-service.js"></script>
+  <script src="app/infrastructure/components/table/uiTable.js"></script>	  
  
   <!--layout Imports-->
-  <script src="layout/directives/leftPanelDirective.js"></script>	  
-	 
-	
-    <!--App Constants Import-->  
+  <script src="app/layout/directives/leftPanelDirective.js"></script>	  
+
+
+ <!--App Constants Import-->  
   <script src="http://rawgit.com/bhaskar415/UIProject/master/main/app/constants/js/appConstantsService.js"></script>     
-		
 	
   <!--App Import-->
   <script src="app.js"></script>
-  <script src="appFac_directive.js"></script>
-  <script src="service.js"></script>  
+  <script src="controller/FormsController.js"></script>
+  <script src="model/FormsService.js"></script>
+  <script src="directives/FormsDirective_local.js"></script>
   
  
 </head>
 
-<body ng-app="myApp">  
+<body  ng-controller="layoutCtrl">  
+  
+		 <user-forms></user-forms>
  
-  <div ng-controller="layoutCtrl">
-		<!-- angular templating -->
-        <!-- this is where content will be injected -->
-		<div ng-include="template.layout"></div>
-   </div>
- 
- </body>
+  
+</body>
 </html>
 
 
