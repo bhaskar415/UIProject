@@ -7,6 +7,6 @@ leftPanel.directive('leftPanel', function(){
 			columns: '=',
 			 },	 
 	 controller:"",		
-     templateUrl: 'app/layout/html/components/leftPanel.html'
+     templateUrl: 'layout/view/components/leftPanel.html'
   };
 });
