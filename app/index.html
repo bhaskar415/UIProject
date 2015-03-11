@@ -1,4 +1,4 @@
-<html ng-app="myApp">
+<html>
 <head>
   <title>Dyno Forms</title>
   
@@ -12,38 +12,45 @@
   <!--ui-grid Import   https://github.com/angular-ui/ui-grid.info/tree/gh-pages/release -->
 	<script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
     <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css">
- 		  
-		  
-	   <!-- JavaScript placed at the end of the document so the pages load faster -->
+   
+   <!-- JavaScript placed at the end of the document so the pages load faster -->
     <!-- Optional: Include the jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Optional: Incorporate the Bootstrap JavaScript plugins -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	  
-		  
-  <!--Infrastructure Import-->
-  <script src="app/infrastructure/service/http-curd-service.js"></script>
-  <script src="app/infrastructure/components/table/uiTable.js"></script>	  
-		  
+		
+
+
+		
+  <!--Infrastructure Imports-->
+  <script src="infrastructure/service/http-curd-service.js"></script>
+  <script src="infrastructure/components/table/uiTable.js"></script>	  
+ 
+  <!--layout Imports-->
+  <script src="layout/directives/leftPanelDirective.js"></script>	  
+	 
+	
+    <!--App Constants Import-->  
+  <script src="http://rawgit.com/bhaskar415/UIProject/master/main/app/constants/js/appConstantsService.js"></script>     
+		
+	
   <!--App Import-->
-  <script src="app_V2.js"></script>
+  <script src="app.js"></script>
   <script src="appFac_directive.js"></script>
   <script src="service.js"></script>  
   
  
 </head>
 
-<body ng-controller="MainCtrl2">
-
-
-   <!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <div id="main">
+<body ng-app="myApp">  
+ 
+  <div ng-controller="layoutCtrl">
 		<!-- angular templating -->
         <!-- this is where content will be injected -->
-        <div ng-view></div>       
-    </div>
+		<div ng-include="template.layout"></div>
+   </div>
  
-  
-</body>
+ </body>
 </html>
 
 
